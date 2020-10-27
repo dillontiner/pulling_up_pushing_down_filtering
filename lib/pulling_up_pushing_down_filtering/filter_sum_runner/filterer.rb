@@ -1,6 +1,6 @@
 module PullingUpPushingDownFiltering
-  module Interface1
-    module ImplementationDetail
+  module FilterSumRunner
+    module Filterer
       class << self
         def filter(array_of_hashes)
           array_of_hashes.select do |hash|

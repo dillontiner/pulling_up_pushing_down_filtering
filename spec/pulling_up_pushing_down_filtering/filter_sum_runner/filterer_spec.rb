@@ -1,4 +1,4 @@
-RSpec.describe PullingUpPushingDownFiltering::Interface1::ImplementationDetail do
+RSpec.describe PullingUpPushingDownFiltering::FilterSumRunner::Filterer do
   subject { described_class.filter(array_of_hashes) }
   let(:array_of_hashes) do
     [

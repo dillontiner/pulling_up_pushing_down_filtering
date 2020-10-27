@@ -9,24 +9,24 @@ Lab problem for Gusto Engineering Boot Camp Week 4 on Modularization
 ### Problem
 We want to make a structural change to this code following the TDD red-green-refactor methodology. 
 
-Get through as much of the following as you can in 30 minutes. Make a commit for each bullet, setting the commit message to the text of the bullet like `git commit -m "[Red] ..."`. Run the tests to ensure the 
+Make a commit for each bullet, setting the commit message to the text of the bullet like `git commit -m "[Red] ..."`. Run the tests to ensure the they fail for Red commits and pass for Green commmits.
 
-(1) "Pull up" filtering logic: Change move the filtering logic from ImplementationDetail to Interface1
-- [Red] Update Interface1's tests so it tests the filtering behavior performed by ImplementationDetail, comment out Interface1's use of ImplementationDetail
-- [Green] Uncomment Interface1's use of ImplementationDetail
-- [Green] Implement filtering inline in Interface1
+(1) "Pull up" filtering logic: Move the filtering logic from Filterer to FilterSumRunner
+- [Red] Update FilterSumRunner's tests so it tests the filtering behavior performed by Filterer, comment out FilterSumRunner's use of Filterer
+- [Green] Uncomment FilterSumRunner's use of Filterer
+- [Refactor] Implement filtering inline in FilterSumRunner
 
 (2) Change the filtering to consider an additional attribute
-- [Red] Add a test so Interface1's filters for filter_for_this OR filter_for_this_too
-- [Green] Implement additional filtering in Interface1
+- [Red] Add a test so FilterSumRunner's filters for filter_for_this OR filter_for_this_too
+- [Green] Implement additional filtering in FilterSumRunner
 
-(3) "Push down" filtering logic: Change this updated filtering logic to be handled once again by `ImplementationDetail`
-- [Green] Implement filtering logic in ImplementationDetail
+(3) "Push down" filtering logic: Change this updated filtering logic to be handled once again by `Filterer`
+- [Refactor] Implement filtering logic in Filterer
 
-(4) With whatever commits you choose, move the filtering logic back to `Interface1` to effectively re-try (1) with the new test structure. Do you notice any differences in re-doing this move now?
+(4) With whatever commits you choose, move the filtering logic back to `FilterSumRunner` to effectively re-try (1) with the new test structure. Do you notice any differences in re-doing this move now?
 
 ### Optional Extension
-`Interface2` implements a method called `meddle_with_other_interfaces_detail` which calls the `ImplementationDetail` class behind the other interface, `Interface1`. Try using `private_constant` to make `Interface2` unable to call this other interface's implementation detail. Running the tests will show `Interface2`'s test fail if this is done properly. 
+`Meddler` implements a method called `meddle_with_other_interfaces_detail` which calls the `Filterer` class behind the other interface, `FilterSumRunner`. Try using `private_constant` to make `Meddler` unable to call this other interface's implementation detail. Running the tests will show `Meddler`'s test fail if this is done properly. 
 
 
 

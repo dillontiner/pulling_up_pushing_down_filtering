@@ -1,4 +1,4 @@
-RSpec.describe PullingUpPushingDownFiltering::Interface2 do
+RSpec.describe PullingUpPushingDownFiltering::Meddler do
   subject { described_class.meddle_with_other_interfaces_detail }
 
   it "calls implementation details behind the other interface" do
