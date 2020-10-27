@@ -6,7 +6,7 @@ module PullingUpPushingDownFiltering
   #   [{amount: 10, filter_for_this: true}, {amount: 20, filter_for_this: false}]
   # Returns the sum of amounts on hashes where filter_for_this is true
   class << self
-    def call(array_of_hashes)
+    def filter_and_sum(array_of_hashes)
       filtered_hashes = PullingUpPushingDownFiltering::ImplementationDetail.filter(array_of_hashes)
       filtered_hashes.sum { |hash| hash[:amount] }
     end
