@@ -1,40 +1,35 @@
-# PullingUpPushingDownFiltering
+# Lab PullingUpPushingDownFiltering
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/pulling_up_pushing_down_filtering`. To experiment with that code, run `bin/console` for an interactive prompt.
+### Setup
+- clone this repo 
+- cd into `pulling_up_pushing_down` and run `bundle install`
+- run the tests with `rake rspec` to see that they pass
 
-TODO: Delete this and the text above, and describe your gem
+### Problem
+We want to make a structural change to this code following the TDD red-green-refactor methodology. 
 
-## Installation
+Get through as much of the following as you can in 30 minutes. Make a commit for each bullet, setting the commit message to the text of the bullet.
 
-Add this line to your application's Gemfile:
+(1) "Pull up" filtering logic: Change move the filtering logic from ImplementationDetail to Interface1
+- [Red] Add a test so Interface1 tests the filtering performed by ImplementationDetail directly, comment out Interface1's use of ImplementationDetail
+- [Green] Uncomment Interface1's use of ImplementationDetail
+- [Refactor] Implement filtering inline in Interface1
 
-```ruby
-gem 'pulling_up_pushing_down_filtering'
-```
+(2) Change the filtering to consider an additional attribute
+- [Red] Add a test so Interface1's filtering and sum also filters on the `filter_for_this_too` attribute
+- [Green] Implement additional filtering in Interface1
 
-And then execute:
+(3) "Push down" filtering logic: Change this updated filtering logic to be handled once again by `ImplementationDetail`
+- [Green] Implement filtering logic in ImplementationDetail
 
-    $ bundle install
+(4) With whatever commits you choose, move the filtering logic back to `Interface1` to effectively re-try (1) with the new test structure. Do you notice any differences in re-doing this move now?
 
-Or install it yourself as:
-
-    $ gem install pulling_up_pushing_down_filtering
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/pulling_up_pushing_down_filtering.
+### Optional Extension
+`Interface2` implements a method called `meddle_with_other_interfaces_detail` which calls the `ImplementationDetail` class behind the other interface, `Interface1`. Try using `private_constant` to make `Interface2` unable to call this other interface's implementation detail. Running the tests will show `Interface2`'s test fail if this is done properly. 
 
 
-## License
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+
+
+
