@@ -1,9 +1,9 @@
 # PullingUpPushingDownFiltering
-Lab problem for Gusto Engineering Boot Camp Week 4 on Modularization.
+Lab problem for Gusto Engineering Boot Camp Week 4 on Modularization
 
 ### Setup
-- clone this repo (TODO: add command)
-- cd into `pulling_up_pushing_down` and run `bundle install`
+- clone this repo with `git clone https://github.com/dillontiner/pulling_up_pushing_down_filtering.git`
+- move into the repo and install the gem with `cd pulling_up_pushing_down` then `bundle install`
 - run the tests with `rake rspec` to see that they pass
 
 ### Problem
