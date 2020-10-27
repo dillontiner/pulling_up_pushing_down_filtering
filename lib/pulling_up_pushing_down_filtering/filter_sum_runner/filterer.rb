@@ -9,5 +9,7 @@ module PullingUpPushingDownFiltering
         end
       end
     end
+
+    private_constant :ImplementationDetail
   end
 end
