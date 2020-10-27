@@ -5,10 +5,10 @@ module PullingUpPushingDownFiltering
         begin
           PullingUpPushingDownFiltering::Interface1::ImplementationDetail.filter([])
         rescue
-          puts ":( I can't meddle with the other interface's implementation details"
+          ":( I can't meddle with the other interface's implementation details"
         end
 
-        puts "I can reach call code the other interface"
+        "I can reach call code the other interface >:)"
       end
     end
   end
