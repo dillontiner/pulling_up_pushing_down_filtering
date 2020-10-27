@@ -1,9 +1,9 @@
 module PullingUpPushingDownFiltering
   module Interface2
     class << self
-      def meddle_with_other_interfaces_detail(array_of_hashes)
+      def meddle_with_other_interfaces_detail
         begin
-          PullingUpPushingDownFiltering::Interface1::ImplementationDetail.filter(array_of_hashes)
+          PullingUpPushingDownFiltering::Interface1::ImplementationDetail.filter([])
         rescue
           puts ":( I can't meddle with the other interface's implementation details"
         end
