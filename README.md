@@ -12,7 +12,7 @@ We want to make a structural change to this code following the TDD red-green-ref
 Get through as much of the following as you can in 30 minutes. Make a commit for each bullet, setting the commit message to the text of the bullet.
 
 (1) "Pull up" filtering logic: Change move the filtering logic from ImplementationDetail to Interface1
-- [Red] Add a test so Interface1 tests the filtering performed by ImplementationDetail directly, comment out Interface1's use of ImplementationDetail
+- [Red] Update Interface1's tests so it tests the filtering behavior performed by ImplementationDetail, comment out Interface1's use of ImplementationDetail
 - [Green] Uncomment Interface1's use of ImplementationDetail
 - [Refactor] Implement filtering inline in Interface1
 
