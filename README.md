@@ -17,7 +17,7 @@ Get through as much of the following as you can in 30 minutes. Make a commit for
 - [Green] Implement filtering inline in Interface1
 
 (2) Change the filtering to consider an additional attribute
-- [Red] Add a test so Interface1's filtering and sum also filters on the `filter_for_this_too` attribute
+- [Red] Add a test so Interface1's filters for `filter_for_this` OR `filter_for_this_too`
 - [Green] Implement additional filtering in Interface1
 
 (3) "Push down" filtering logic: Change this updated filtering logic to be handled once again by `ImplementationDetail`
