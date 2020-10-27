@@ -9,12 +9,12 @@ Lab problem for Gusto Engineering Boot Camp Week 4 on Modularization
 ### Problem
 We want to make a structural change to this code following the TDD red-green-refactor methodology. 
 
-Get through as much of the following as you can in 30 minutes. Make a commit for each bullet, setting the commit message to the text of the bullet.
+Get through as much of the following as you can in 30 minutes. Make a commit for each bullet, setting the commit message to the text of the bullet like `git commit -m "[Red] ..."`. Run the tests to ensure the 
 
 (1) "Pull up" filtering logic: Change move the filtering logic from ImplementationDetail to Interface1
 - [Red] Update Interface1's tests so it tests the filtering behavior performed by ImplementationDetail, comment out Interface1's use of ImplementationDetail
 - [Green] Uncomment Interface1's use of ImplementationDetail
-- [Refactor] Implement filtering inline in Interface1
+- [Green] Implement filtering inline in Interface1
 
 (2) Change the filtering to consider an additional attribute
 - [Red] Add a test so Interface1's filtering and sum also filters on the `filter_for_this_too` attribute
