@@ -1,9 +1,11 @@
 RSpec.describe PullingUpPushingDownFiltering do
-  it "has a version number" do
-    expect(PullingUpPushingDownFiltering::VERSION).not_to be nil
+  subject { described_class.call([]) }
+
+  before do
+    allow(described_class::ImplementationDetail).to receive(:filter).and_return([{amount: 10, filter_for_this: true}])
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  it "filters input on filter_for_this and sums amount" do
+    expect(subject).to eq(10)
   end
 end
