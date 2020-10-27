@@ -1,5 +1,6 @@
 require "bundler/setup"
 require "pulling_up_pushing_down_filtering"
+require "pry"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
