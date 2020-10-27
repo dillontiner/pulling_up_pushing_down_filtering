@@ -7,7 +7,7 @@ RSpec.describe PullingUpPushingDownFiltering::FilterSumRunner do
     ]
   end
 
-  it "filters input on filter_for_this and sums amount" do
-    expect(subject).to eq(10)
+  it "filters input on filter_for_this OR filter_for_this_too and sums amount" do
+    expect(subject).to eq(30)
   end
 end
